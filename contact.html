@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form id="contactForm">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="button" onclick="sendEmail()">Send Message</button>
+        </form>
+        
+    </section>
+
+    <script>
+        // Toggle Menu for Mobile
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".nav-links").classList.toggle("active");
+            
+        });
+    </script>
+    <script>
+        function sendEmail() {
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+    
+            // Construct mailto URL
+            var subject = encodeURIComponent("Contact Form Inquiry from " + name);
+            var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+    
+            // Open Gmail with pre-filled details
+            window.location.href = `mailto:samyoga2k23@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+    
+</body>
+</html>

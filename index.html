@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samyoga-25</title>
+    <link rel="stylesheet" href="valostyles.css">
+</head>
+<body>
+
+    <div class="parallax">
+        <video autoplay muted loop id="background">
+            <source src="./images/vedio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="/images/logo.png" alt="Samyoga Logo" class="logo"> 
+        <h1 class="title">SAMYOGA 25</h1>
+        <h2 class="subtitle">FEB 24-25</h2>
+         <!-- COUNTDOWN TIMER -->
+         <div class="countdown-container">
+            <!-- <h3>Event Starts In:</h3> -->
+            <div id="countdown">
+                <div class="time-box"><span id="days"></span><small>Days</small></div>
+                <div class="time-box"><span id="hours"></span><small>Hours</small></div>
+                <div class="time-box"><span id="minutes"></span><small>Minutes</small></div>
+                <div class="time-box"><span id="seconds"></span><small>Seconds</small></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card" onclick="window.location.href='tickets.html'">BOOK TICKETS</div>
+            <div class="card" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSctpWMM_WzVi0xeaBvJFrlGyYirhGizQDvdQ_UUmDn9xG9nYA/viewform?usp=sf_link'" >REGISTER FOR NATYA</div>
+            <div class="card" onclick="window.location.href='contact.html'">CONTACTS</div>
+        </div>
+    </div>
+<!-- 
+    <div class="menu">
+        <ul>
+            <li class="active">BOOK TICKET</li>
+            <li>ABOUT</li>
+            <li>EVENTS</li>
+            <li>CONTACTS</li>
+            <li>AGENTS</li>
+            <li>STORE</li>
+        </ul>
+    </div> -->
+
+    
+
+    <script src="valoscript.js"></script>
+
+</body>
+</html>

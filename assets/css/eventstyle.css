@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 50px; /* Creates space below the fixed navbar */
+
+  }
+  
+  /* Header */
+  .header_section {
+    background-color: #222;
+    padding: 10px 0;
+  }
+  
+  .header_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-brand img {
+    height: 50px;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .navbar-nav .nav-item {
+    display: inline-block;
+  }
+  
+  .navbar-nav .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f39c12;
+  }
+  
+  /* Hero Section */
+  .hero_area {
+    background: url("../images/event-banner.jpg") no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero_area h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Events Section */
+  .blog_section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .blog_section h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .blog_section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Event Cards */
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .event_box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .event_box h3 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 15px;
+  }
+  
+  .event_box p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .event_box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .event_box a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  .footer_section {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer_section p {
+    margin: 0;
+  }
+  
+  .social_links {
+    margin-top: 10px;
+  }
+  
+  .social_links a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+  }
+  
+  .social_links a img:hover {
+    transform: scale(1.1);
+  }
+  

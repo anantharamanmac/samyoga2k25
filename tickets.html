@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAPZAURA | Get Your Ticket</title>
+    <link rel="stylesheet" href="assets/css/tickets.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>GET YOUR TICKET</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-container">
+        <h2>REGISTER FOR RAPZAURA</h2>
+        <p>Experience the best of RAPZAURA by reserving your tickets today!</p>
+        <marquee class="marquee">✨ SPOT BOOKING AVAILABLE AT THE CAMPUS ✨</marquee>
+
+        <div class="ticket-box">
+            <div class="ticket-card">
+                <img src="images/c1.png" alt="Ticket 1">
+                <div class="btn-box">
+                    <a onclick="showPopup()">GRAB YOUR TICKETS</a>
+                </div>
+            </div>
+
+            <div class="ticket-card">
+                <img src="images/c2.png" alt="Ticket 2">
+                <div class="btn-box">
+                    <a href="saleend.html">GRAB YOUR TICKETS</a>
+                </div>
+            </div>
+
+            <div class="ticket-card">
+                <img src="images/c3.png" alt="Ticket 3">
+                <div class="btn-box">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSctpWMM_WzVi0xeaBvJFrlGyYirhGizQDvdQ_UUmDn9xG9nYA/viewform?usp=sf_link">REGISTER NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup -->
+    <div class="overlay" id="overlay"></div>
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p>Registration is not open yet...</p>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

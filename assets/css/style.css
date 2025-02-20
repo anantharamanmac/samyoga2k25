@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d1117;
+    color: #fff;
+    padding-top: 100px; /* Creates space below the fixed navbar */
+}
+
+/* HEADER NAVIGATION */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(255, 70, 85, 0.2);
+    animation: slideDown 1s ease-in-out;
+}
+/* About Section */
+.about-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff4655;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 70, 85, 0.5);
+}
+
+.input-group {
+    margin: 15px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: red;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d1117;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ff4655;
+    text-decoration: none;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff4655;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #ff4655;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 70, 85, 0.7);
+}
+
+/* PARALLAX SECTION */
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('') no-repeat center/cover;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/background.jpg') no-repeat center/cover;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    will-change: transform, opacity;
+    transition: transform 0.2s ease-out, opacity 0.3s ease-in-out;
+}
+
+#layer1 { background: url('/images/layer3.png') no-repeat center/cover; z-index: 3; }
+#layer2 { background: url('/images/layer2.png') no-repeat center/cover; z-index: 2; }
+#layer3 { background: url('/images/layer1.png') no-repeat center/cover; z-index: 1; }
+
+/* Extra Smooth Effect */
+.title {
+    position: relative;
+    z-index: 10;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ff4655;
+    text-shadow: 0 0 15px rgba(255, 70, 85, 0.8);
+    transition: transform 0.2s ease-out;
+}
+
+.parallax .title {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* GLITCH TEXT EFFECT FOR TITLE */
+.title {
+    position: relative;
+    z-index: 10;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ff4655;
+    text-shadow: 0 0 15px rgba(255, 70, 85, 0.8);
+   
+}
+
+/* GLITCH EFFECT */
+@keyframes glitch {
+    0% { text-shadow: 3px 3px rgba(255, 70, 85, 0.8); }
+    20% { text-shadow: -3px -3px rgba(255, 70, 85, 0.8); }
+    40% { text-shadow: 5px -5px rgba(255, 70, 85, 0.8); }
+    60% { text-shadow: -5px 5px rgba(255, 70, 85, 0.8); }
+    80% { text-shadow: 3px -3px rgba(255, 70, 85, 0.8); }
+    100% { text-shadow: -3px 3px rgba(255, 70, 85, 0.8); }
+}
+
+/* FADE-IN EFFECT */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 50%;
+        padding: 20px;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
