@@ -54,3 +54,9 @@ function startCountdown() {
 
 // Start countdown on page load
 window.onload = startCountdown;
+document.addEventListener("DOMContentLoaded", function () {
+    // Hide the loading screen after 3 seconds (or when page loads)
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+    }, 4000); // Adjust the delay if needed
+});
